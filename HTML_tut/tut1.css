@@ -1,0 +1,42 @@
+body {
+    background:linear-gradient(to left, skyblue,black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+  color: rgb(255, 252, 249);
+  font-family: "Arial Narrow Bold";
+}
+.headp1 {
+  color: tomato;
+  background-attachment: fixed;
+  font-weight: lighter;
+  text-decoration: solid underline;
+}
+#par1 {
+  color: rgb(246, 246, 242);
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: rgb(17, 118, 207);
+  text-decoration: overline underline;
+}
+.headp2 {
+  color: rgb(205, 50, 22);
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  border-left-style: double;
+  border-left-width: 5px;
+  border-left-color: silver;
+  border-right-style: double;
+  border-right-width: 5px;
+  border-right-color: silver;
+}
+#par2 {
+  color: white;
+  border-style: groove;
+  border-width: 5px;
+  border-color: gold;
+  border-radius: 5px;
+  padding: 10px;
+}

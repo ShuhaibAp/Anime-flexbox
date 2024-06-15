@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <!-- style -->
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .calculator {
+        width: 400px;
+        background-color: rgb(16, 5, 58);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .display {
+        height: 80px;
+        background-color: rgb(11, 80, 103);
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 10px;
+        font-size: x-large;
+        color: white;
+      }
+      .keypad {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(98, 58, 7);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .keypad > div {
+        width: 30%;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .keypad > div > div {
+        background: linear-gradient(
+          140deg,
+          rgb(12, 166, 218) 20%,
+          rgb(93, 91, 91) 50%
+        );
+        width: 70%;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .keypad > div > div:hover {
+        scale: 1.04;
+        box-shadow: -1px 7px 6px 0 #0000004a;
+      }
+    </style>
+    <!-- Content -->
+    <div class="container">
+      <div class="calculator">
+        <div class="display">0</div>
+        <div class="keypad">
+          <div>
+            <div>1</div>
+          </div>
+          <div>
+            <div>2</div>
+          </div>
+          <div>
+            <div>3</div>
+          </div>
+          <div>
+            <div>4</div>
+          </div>
+          <div>
+            <div>5</div>
+          </div>
+          <div>
+            <div>6</div>
+          </div>
+          <div>
+            <div>7</div>
+          </div>
+          <div>
+            <div>8</div>
+          </div>
+          <div>
+            <div>9</div>
+          </div>
+          <div>
+            <div>0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Java script -->
+    <script>
+      const keypad = document.getElementsByClassName("keypad");
+      const display = document.querySelector(".display");
+      keypad[0].childNodes.forEach((e) => {
+        if (e.nodeName == "DIV") {
+          e.addEventListener("click", (i) => {
+            if (display.innerHTML.trim() == "0") {
+              display.innerHTML = i.target.innerText;
+            } else {
+              display.innerHTML = display.innerHTML + i.target.innerText;
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body{
+background-image:url(./images/blackholeee.jpg);
+}
+div{
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+div>#im1{
+cursor: pointer;
+}
+#im2{
+  padding-left: 20px;
+  cursor: pointer;
+}
+#im3{
+  padding-left: 20px;
+  cursor: pointer;
+}
+p{
+color: rgb(233, 200, 170);
+font-size: 17px;
+}
+.fullsize{
+display: block;
+width: 650px;
+height: 450px;
+position: fixed;
+left: 450px;
+top:100px;
+}
